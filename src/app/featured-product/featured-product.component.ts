@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'featured-product',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturedProductComponent implements OnInit {
 
-  constructor() { }
+  @Input() toysList;
+
+  constructor(
+
+  ) { }
 
   ngOnInit() {
+    //this.getToys();
   }
+
+  // getToys() {
+  //   this.toyService.getToys()
+  //     .subscribe(toysData => {
+  //       this.toysList = toysData;
+  //     });
+  // }
 
 }

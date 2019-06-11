@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToyService } from './toy.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular7-demo';
+
+  toysList;
+
+  constructor(
+    private toyService: ToyService
+  ) { }
+
+  ngOnInit() {
+    this.getToys();
+  }
+
+  getToys() {
+    this.toyService.getToys()
+      .subscribe(toysData => {
+        this.toysList = toysData;
+      });
+  }
 }

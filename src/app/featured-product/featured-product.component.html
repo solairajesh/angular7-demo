@@ -1,113 +1,50 @@
+<!-- {{toysList | json}} -->
 <div class="wrapper">
   <h3>Featured Products</h3>
   <div class="row">
-    <div class="col">
+    <div class="col" *ngFor="let featuredToy of toysList | slice:0:4; let i=index">
       <div class="item-content">
         <div class="item-images">
-          <a class="product-image" href="https://www.toycart.com/yellow-color-rc-sports-toy-car.html">
-            <img id="product-collection-image-65" class="item-image" alt="Yellow Color RC Sports Toy Car" src="https://www.toycart.com/media/catalog/product/cache/1/small_image/430x404/789da885c72a8a151a44b06eaa41c4d5/t/c/tca101000058-yellow-2.jpg">
+          <a class="product-image" href="#">
+            <img id="product-collection-image-{{i}}" class="item-image" alt="{{featuredToy.toyTitle}}" src="{{featuredToy.imageUrl}}">
           </a>
         </div>
         <div class="item-info">
           <h6 class="item-title">
-            <a href="https://www.toycart.com/yellow-color-rc-sports-toy-car.html" class="truncate"><span>Yellow Color RC Sports Toy Car</span></a>
+            <a href="#" class="truncate"><span>{{featuredToy.toyTitle}}</span></a>
           </h6>
           <div class="price-box">
-            <p class="old-price">
+            <p>
               <span class="price-label">Price:</span>
-              <span class="price" id="old-price-65">
-                ₹1,849 </span>
+              <span class="price">
+                ₹{{featuredToy.price}} </span>
             </p>
           </div>
-          <a href="https://www.toycart.com/itactica_quickview/product/view/id/65/" title="Yellow Color RC Sports Toy Car" class="quickview-button button">Quick View</a>
+          <a href="#" title="{{featuredToy.toyTitle}}" class="quickview-button button">Quick View</a>
         </div>
       </div>
     </div>
-    <div class="col">
+  </div>
+  <div class="row">
+    <div class="col" *ngFor="let featuredToy of toysList | slice:4:8; let i=index">
       <div class="item-content">
         <div class="item-images">
-          <a class="product-image" href="https://www.toycart.com/yellow-color-rc-sports-toy-car.html">
-            <img id="product-collection-image-65" class="item-image" alt="Yellow Color RC Sports Toy Car" src="https://www.toycart.com/media/catalog/product/cache/1/small_image/430x404/789da885c72a8a151a44b06eaa41c4d5/t/c/tca101000058-yellow-2.jpg">
+          <a class="product-image" href="#">
+            <img id="product-collection-image-{{i}}" class="item-image" alt="{{featuredToy.toyTitle}}" src="{{featuredToy.imageUrl}}">
           </a>
         </div>
         <div class="item-info">
           <h6 class="item-title">
-            <a href="https://www.toycart.com/yellow-color-rc-sports-toy-car.html" class="truncate"><span>Yellow Color RC Sports Toy Car</span></a>
+            <a href="#" class="truncate"><span>{{featuredToy.toyTitle}}</span></a>
           </h6>
           <div class="price-box">
-            <p class="old-price">
+            <p>
               <span class="price-label">Price:</span>
-              <span class="price" id="old-price-65">
-                ₹1,849 </span>
+              <span class="price">
+                ₹{{featuredToy.price}} </span>
             </p>
           </div>
-          <a href="https://www.toycart.com/itactica_quickview/product/view/id/65/" title="Yellow Color RC Sports Toy Car" class="quickview-button button">Quick View</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="item-content">
-        <div class="item-images">
-          <a class="product-image" href="https://www.toycart.com/yellow-color-rc-sports-toy-car.html">
-            <img id="product-collection-image-65" class="item-image" alt="Yellow Color RC Sports Toy Car" src="https://www.toycart.com/media/catalog/product/cache/1/small_image/430x404/789da885c72a8a151a44b06eaa41c4d5/t/c/tca101000058-yellow-2.jpg">
-          </a>
-        </div>
-        <div class="item-info">
-          <h6 class="item-title">
-            <a href="https://www.toycart.com/yellow-color-rc-sports-toy-car.html" class="truncate"><span>Yellow Color RC Sports Toy Car</span></a>
-          </h6>
-          <div class="price-box">
-            <p class="old-price">
-              <span class="price-label">Price:</span>
-              <span class="price" id="old-price-65">
-                ₹1,849 </span>
-            </p>
-          </div>
-          <a href="https://www.toycart.com/itactica_quickview/product/view/id/65/" title="Yellow Color RC Sports Toy Car" class="quickview-button button">Quick View</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="item-content">
-        <div class="item-images">
-          <a class="product-image" href="https://www.toycart.com/yellow-color-rc-sports-toy-car.html">
-            <img id="product-collection-image-65" class="item-image" alt="Yellow Color RC Sports Toy Car" src="https://www.toycart.com/media/catalog/product/cache/1/small_image/430x404/789da885c72a8a151a44b06eaa41c4d5/t/c/tca101000058-yellow-2.jpg">
-          </a>
-        </div>
-        <div class="item-info">
-          <h6 class="item-title">
-            <a href="https://www.toycart.com/yellow-color-rc-sports-toy-car.html" class="truncate"><span>Yellow Color RC Sports Toy Car</span></a>
-          </h6>
-          <div class="price-box">
-            <p class="old-price">
-              <span class="price-label">Price:</span>
-              <span class="price" id="old-price-65">
-                ₹1,849 </span>
-            </p>
-          </div>
-          <a href="https://www.toycart.com/itactica_quickview/product/view/id/65/" title="Yellow Color RC Sports Toy Car" class="quickview-button button">Quick View</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="item-content">
-        <div class="item-images">
-          <a class="product-image" href="https://www.toycart.com/yellow-color-rc-sports-toy-car.html">
-            <img id="product-collection-image-65" class="item-image" alt="Yellow Color RC Sports Toy Car" src="https://www.toycart.com/media/catalog/product/cache/1/small_image/430x404/789da885c72a8a151a44b06eaa41c4d5/t/c/tca101000058-yellow-2.jpg">
-          </a>
-        </div>
-        <div class="item-info">
-          <h6 class="item-title">
-            <a href="https://www.toycart.com/yellow-color-rc-sports-toy-car.html" class="truncate"><span>Yellow Color RC Sports Toy Car</span></a>
-          </h6>
-          <div class="price-box">
-            <p class="old-price">
-              <span class="price-label">Price:</span>
-              <span class="price" id="old-price-65">
-                ₹1,849 </span>
-            </p>
-          </div>
-          <a href="https://www.toycart.com/itactica_quickview/product/view/id/65/" title="Yellow Color RC Sports Toy Car" class="quickview-button button">Quick View</a>
+          <a href="#" title="{{featuredToy.toyTitle}}" class="quickview-button button">Quick View</a>
         </div>
       </div>
     </div>
