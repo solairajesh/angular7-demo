@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'banner',
@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
+    private bannerData;
+
+  @Input()
+    set toysList(toysList) {
+      this.getBanners(toysList);
+    }
+    // get toysList() {
+    //   return this.banners;
+    // }
+
   constructor() { }
 
   ngOnInit() {
+    //this.getBanners();
+  }
+
+  getBanners(toysList) {
+    this.bannerData = toysList.filter((toy, index) => {
+      if(toy.bannerImageUrl){
+        return true;
+      }
+    });
   }
 
 }
