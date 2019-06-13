@@ -1,0 +1,25 @@
+.item-images {
+    text-align: center;
+}
+
+img.item-image {
+    width: 150px;
+}
+
+.item-content {
+    box-shadow: 1px 3px 1px rgba(50, 50, 50, 0.1);
+    background: ghostwhite;
+    padding: 10px;
+}
+
+.col {
+    margin-bottom: 30px;
+}
+
+.item-info {
+    margin: 10px 0 0 10px;
+}
+
+.wrapper {
+    margin-top: 25px;
+}

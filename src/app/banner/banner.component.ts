@@ -24,11 +24,13 @@ export class BannerComponent implements OnInit {
   }
 
   getBanners(toysList) {
-    this.bannerData = toysList.filter((toy, index) => {
-      if(toy.bannerImageUrl){
-        return true;
-      }
-    });
+    if(toysList) {
+      this.bannerData = toysList.filter((toy, index) => {
+        if(toy.bannerImageUrl){
+          return true;
+        }
+      });
+    }
   }
 
 }

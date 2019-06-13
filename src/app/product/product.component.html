@@ -1,0 +1,43 @@
+<div class="container">
+  <h3>Toys List</h3>
+	<div class="row justify-content-md-center">
+		<div class="col col-lg-3">
+			<div class="item-content">
+				<div class="item-images">
+					<h4>Filter Toys</h4>
+					<div>Filter 1</div>
+					<div>Filter 2</div>
+					<div>Filter 3</div>
+					<div>Filter 4</div>
+					<div>Filter 5</div>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="row" *ngFor="let toy of toysList; let i=index">
+				<div class="col item-content">
+          <div class="row">
+            <div class="item-images col col-lg-3">
+              <a class="product-image" href="#">
+                <img id="product-collection-image-{{i}}" class="item-image" alt="{{toy.toyTitle}}" src="{{toy.imageUrl}}">
+            </a>
+            </div>
+            <div class="item-info col">
+              <h6 class="item-title">
+                <a href="#" class="truncate"><span>{{toy.toyTitle}}</span></a>
+              </h6>
+              <div class="price-box">
+                <p>
+                  <span class="price-label">Price:</span>
+                  <span class="price">
+                    ₹{{toy.price}} </span>
+                </p>
+              </div>
+              <a href="#" title="{{toy.toyTitle}}" class="quickview-button button">Quick View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
