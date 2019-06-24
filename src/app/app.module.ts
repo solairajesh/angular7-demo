@@ -11,6 +11,7 @@ import { BannerComponent } from './banner/banner.component';
 import { FeaturedProductComponent } from './featured-product/featured-product.component';
 import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms'
 //import { ToyService } from './toy.service';
 
 @NgModule({
@@ -19,7 +20,7 @@ import { LoginComponent } from './login/login.component';
     LoginComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, AppRouterModule
+    BrowserModule, HttpClientModule, AppRouterModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
